@@ -11,6 +11,7 @@ export const signup = async (req, res, next) => {
     await newUser.save();
     res.status(201).json('User Created Successfully');
   } catch (err) {
+    console.log("Error 7");
     next(err);
   }
 };
@@ -29,6 +30,7 @@ export const signin = async (req, res, next) => {
       .status(200)
       .json(rest);
   } catch (error) {
+    console.log("Error 5");
     next(error);
   }
 };
@@ -65,6 +67,7 @@ export const google = async (req, res, next) => {
         .json(rest);
     }
   } catch (error) {
+    console.log("Error 6");
     next(error);
   }
 };
