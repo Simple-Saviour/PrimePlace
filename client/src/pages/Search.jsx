@@ -58,7 +58,7 @@ export default function Search() {
       } else {
         setShowMore(false);
       }
-      console.log(data);
+      // console.log(data);
       setListings(data);
       setLoading(false);
     };

@@ -53,7 +53,7 @@ export default function Profile() {
         setFilePerc(Math.round(progress));
       },
       (error) => {
-        console.log('Error3');
+        // console.log('Error3');
         setFileUploadError(true);
       },
       () => {
@@ -81,7 +81,7 @@ export default function Profile() {
       });
       const data = await res.json();
       if (data.success === false) {
-        console.log('Error2');
+        // console.log('Error2');
         dispatch(updateUserFailure(data.message));
 
         return;
@@ -90,7 +90,7 @@ export default function Profile() {
       dispatch(updateUserSuccess(data));
       setUpdateSuccess(true);
     } catch (error) {
-      console.log('Error1');
+      // console.log('Error1');
       dispatch(updateUserFailure(error.message));
     }
   };
@@ -104,13 +104,13 @@ export default function Profile() {
       const data = await res.json();
 
       if (data.success === false) {
-        console.log('Error8');
+        // console.log('Error8');
         dispatch(deleteUserFailure(data.message));
         return;
       }
       dispatch(deleteUserSuccess(data));
     } catch (error) {
-      console.log('Error7');
+      // console.log('Error7');
       dispatch(deleteUserFailure(error.message));
     }
   };
