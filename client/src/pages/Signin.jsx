@@ -5,8 +5,8 @@ import {
   signInStart,
   signInSuccess,
   signInFailure,
-} from '../redux/user/userSlice.js';
-import OAuth from '../components/OAuth.jsx';
+} from '../redux/user/userSlice';
+import OAuth from '../components/OAuth';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({});
@@ -31,18 +31,17 @@ export default function SignIn() {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      // console.log(data);
+      console.log(data);
       if (data.success === false) {
         dispatch(signInFailure(data.message));
         return;
       }
       dispatch(signInSuccess(data));
-      navigate('/home');
+      navigate('/');
     } catch (error) {
       dispatch(signInFailure(error.message));
     }
   };
-  // console.log(formData);
   return (
     <div className='p-3 max-w-lg mx-auto'>
       <h1 className='text-3xl text-center font-semibold my-7'>Sign In</h1>
