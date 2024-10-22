@@ -39,4 +39,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 For any inquiries or feedback, please get in touch with me at aryanchoudhary047@gmail.com.
 
 
-### **Thank you for checking out Prime Palace! We hope you enjoy using it as much as we enjoyed building it.**
+### **Thank you for checking out Prime Palace! I hope you enjoy using it as much as I enjoyed building it.**
